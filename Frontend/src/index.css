@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Customer frontend now styled with Admin's theme system */
+
+@layer base {
+  :root {
+    /* Base colors - Clean and natural */
+    --background: 30 20% 98%;
+    --foreground: 24 9% 10%;
+
+    /* Card system - Subtle earth tones */
+    --card: 0 0% 100%;
+    --card-foreground: 24 9% 10%;
+
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 24 9% 10%;
+
+    /* Primary - Natural farming green */
+    --primary: 142 71% 45%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 142 71% 55%;
+
+    /* Secondary - Warm earth tone */
+    --secondary: 30 25% 92%;
+    --secondary-foreground: 24 9% 10%;
+
+    /* Muted - Subtle natural grays */
+    --muted: 30 15% 95%;
+    --muted-foreground: 25 5% 45%;
+
+    /* Accent - Sky blue for highlights */
+    --accent: 197 71% 73%;
+    --accent-foreground: 24 9% 10%;
+
+    /* Success - Fresh green */
+    --success: 120 61% 50%;
+    --success-foreground: 0 0% 98%;
+
+    /* Warning - Natural gold */
+    --warning: 45 93% 58%;
+    --warning-foreground: 26 83% 14%;
+
+    /* Destructive - Natural red */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Border and input - Soft natural */
+    --border: 30 20% 88%;
+    --input: 30 20% 88%;
+    --ring: 142 71% 45%;
+
+    --radius: 0.5rem;
+
+    /* Gradients for farming theme */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(30 30% 88%));
+    --gradient-hero: linear-gradient(135deg, hsl(142 71% 45%), hsl(120 61% 50%));
+    --gradient-farm: linear-gradient(135deg, hsl(142 71% 45%), hsl(120 61% 50%));
+    
+    /* Shadows with natural feel */
+    --shadow-natural: 0 4px 20px -4px hsl(var(--primary) / 0.15);
+    --shadow-card: 0 2px 10px -2px hsl(30 20% 70% / 0.2);
+    --shadow-glow: 0 0 30px hsl(var(--primary-glow) / 0.3);
+    --shadow-farm: 0 4px 16px -4px hsl(var(--primary) / 0.2);
+
+    /* Sidebar with farming theme */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 24 9% 10%;
+    --sidebar-primary: 142 71% 45%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 30 15% 95%;
+    --sidebar-accent-foreground: 24 9% 10%;
+    --sidebar-border: 30 20% 88%;
+    --sidebar-ring: 142 71% 45%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  
+  #root {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
